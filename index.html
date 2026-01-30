@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Carth Festas & Cia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <img src="img/logo.png" class="logo">
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="categoria.html?cat=adesivos">Catálogo</a>
+    <a href="#">Sobre Nós</a>
+    <a href="#">Contato</a>
+    <a href="carrinho.html" class="cart-btn">🛒 Carrinho</a>
+  </nav>
+</header>
+
+<section class="carousel">
+  <img src="img/banner1.jpg">
+  <img src="img/banner2.jpg">
+  <img src="img/banner3.jpg">
+</section>
+
+<section class="categorias">
+  <h2>Nosso Catálogo</h2>
+  <div class="grid">
+    <a href="categoria.html?cat=adesivos">Adesivos</a>
+    <a href="categoria.html?cat=banners">Banners</a>
+    <a href="categoria.html?cat=papelaria">Papelaria</a>
+    <a href="categoria.html?cat=canecas">Canecas e Copos</a>
+  </div>
+</section>
+
+<script>
+let i = 0;
+const imgs = document.querySelectorAll('.carousel img');
+setInterval(() => {
+  imgs.forEach(img => img.style.display = 'none');
+  imgs[i].style.display = 'block';
+  i = (i + 1) % imgs.length;
+}, 3000);
+</script>
+
+</body>
+</html>
