@@ -1,0 +1,34 @@
+{
+  "adesivos": [
+    {
+      "id": "vinil-branco-solvente",
+      "nome": "Adesivo Vinil Base Branca",
+      "tipo": "m2",
+      "processo": "Solvente",
+      "preco": 65,
+      "variacoes": ["Brilho", "Fosco"],
+      "descricao": "Adesivo vinil base branca sem corte."
+    }
+  ],
+  "banners": [
+    {
+      "id": "banner-380g",
+      "nome": "Banner 380g",
+      "tipo": "m2",
+      "preco": 70,
+      "limiteAltura": 1.45,
+      "variacoes": ["Brilho", "Fosco"],
+      "descricao": "Banner com limite máximo de 1,45m no tubete."
+    }
+  ],
+  "papelaria": [
+    {
+      "id": "caixa-milk",
+      "nome": "Caixa Milk",
+      "tipo": "fixo",
+      "preco": 2.5,
+      "variacoes": ["Simples", "3D", "Luxo"],
+      "descricao": "Caixa personalizada para festas."
+    }
+  ]
+}
