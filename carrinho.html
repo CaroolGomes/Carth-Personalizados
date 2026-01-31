@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Carrinho</title>
-  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1>Seu Carrinho</h1>
-<div id="lista"></div>
-<h2 id="total"></h2>
-
+<h1>Carrinho</h1>
+<div id="itens"></div>
 <button onclick="finalizar()">Finalizar no WhatsApp</button>
 
 <script src="js/carrinho.js"></script>
+<script>
+let div=document.getElementById("itens");
+carrinho.forEach(i=>{
+  div.innerHTML+=`<p>${i.nome} - ${i.qtd}x</p>`;
+});
+</script>
 
 </body>
 </html>
