@@ -3,79 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Carth Personalizados</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Instagram Feed -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+
 </head>
 
 <body>
 
-<header>
-    <img src="img/logo.png" class="logo">
+<!-- ================= HEAD IMAGE ================= -->
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Adesivos</a>
-        <a href="#">Banners</a>
-        <a href="#">Lembrancinhas</a>
-        <a href="#">Convites</a>
-        <a href="#">Contato</a>
-    </nav>
+<header class="topo">
+    <img src="img/logo.png" alt="Topo">
 </header>
 
-<!-- CARROSSEL -->
-<section class="carrossel">
-    <img src="img/banner1.jpg" class="slide active">
-    <img src="img/banner2.jpg" class="slide">
-    <img src="img/banner3.jpg" class="slide">
+
+<!-- ================= MENU ================= -->
+
+<nav class="menu">
+
+    <ul class="menu-principal">
+
+        <li><a href="#">INÍCIO</a></li>
+
+        <li class="dropdown">
+
+            <a href="#" onclick="toggleMenu()">CATÁLOGO</a>
+
+            <ul class="submenu" id="submenu">
+
+                <li><a href="#">Adesivos</a></li>
+                <li><a href="#">Banners</a></li>
+                <li><a href="#">Caixas Cartonadas</a></li>
+                <li><a href="#">Copos e Canecas</a></li>
+                <li><a href="#">Estações (em breve)</a></li>
+                <li><a href="#">Lembrancinhas Luxo</a></li>
+                <li><a href="#">Lonas e Backdrop</a></li>
+                <li><a href="#">Papelaria</a></li>
+                <li><a href="#">Personalizada</a></li>
+                <li><a href="#">Produtos Gráficos</a></li>
+                <li><a href="#">Salgados e Doces</a></li>
+                <li><a href="#">Tapete Personalizado</a></li>
+
+            </ul>
+
+        </li>
+
+        <li><a href="#">SOBRE NÓS</a></li>
+        <li><a href="#">CONTATO</a></li>
+
+    </ul>
+
+    <div class="busca">
+        <input type="text" placeholder="Pesquisar">
+    </div>
+
+</nav>
+
+
+<!-- ================= INSTAGRAM ================= -->
+
+<section class="instagram">
+
+<div class="elfsight-app-072da568-a88d-474b-99bd-dbad60105a65"></div>
+
 </section>
 
-<!-- INSTAGRAM -->
-<section class="instagram-feed">
-    <h2>Conheça nossos trabalhos</h2>
 
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-072da568-a88d-474b-99bd-dbad60105a65"></div>
-</section>
-
-<!-- CATEGORIAS -->
-<section class="categorias">
-
-<h2>Nossos Produtos</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Adesivos</h3>
-<button onclick="alert('Página em construção')">Ver produtos</button>
-</div>
-
-<div class="card">
-<h3>Banners</h3>
-<button onclick="alert('Página em construção')">Ver produtos</button>
-</div>
-
-<div class="card">
-<h3>Lembrancinhas</h3>
-<button onclick="alert('Página em construção')">Ver produtos</button>
-</div>
-
-<div class="card">
-<h3>Convites</h3>
-<button onclick="alert('Página em construção')">Ver produtos</button>
-</div>
-
-</div>
-</section>
-
-<!-- WHATSAPP FIXO -->
-<a href="https://wa.me/5521992602985" class="whatsapp" target="_blank">
-💬
-</a>
-
-<script src="script.js"></script>
+<script src="js/menu.js"></script>
 
 </body>
 </html>
+
+
 
 
