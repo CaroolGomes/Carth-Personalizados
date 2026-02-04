@@ -1,28 +1,103 @@
-body {
-font-family: Arial;
-margin: 20px;
-background: #fafafa;
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#dde5eb;
 }
 
-header {
-display: flex;
-justify-content: space-between;
-margin-bottom: 20px;
+/* HEADER */
+
+header{
+background:#16b4bc;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.card {
-border: 1px solid #ddd;
-padding: 15px;
-margin: 10px;
-background: white;
-border-radius: 8px;
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:bold;
 }
 
-button {
-padding: 10px;
-background: #ff4081;
-border: none;
-color: white;
-cursor: pointer;
-border-radius: 5px;
+/* CARROSSEL */
+
+.carrossel{
+width:100%;
+height:350px;
+overflow:hidden;
+position:relative;
+}
+
+.slide{
+width:100%;
+height:350px;
+object-fit:cover;
+display:none;
+}
+
+.slide.active{
+display:block;
+}
+
+/* INSTAGRAM */
+
+.instagram-feed{
+padding:40px;
+text-align:center;
+}
+
+.instagram-feed h2{
+color:#dd5490;
+margin-bottom:20px;
+}
+
+/* CATEGORIAS */
+
+.categorias{
+padding:40px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+color:#16b4bc;
+}
+
+.card button{
+background:#dd5490;
+color:white;
+border:none;
+padding:10px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:30px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
 }
