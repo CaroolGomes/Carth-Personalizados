@@ -1,34 +1,34 @@
 {
-  "adesivos": [
+ "categorias":[
+  {
+   "id":"adesivos",
+   "nome":"Adesivos",
+   "produtos":[
     {
-      "id": "vinil-branco-solvente",
-      "nome": "Adesivo Vinil Base Branca",
-      "tipo": "m2",
-      "processo": "Solvente",
-      "preco": 65,
-      "variacoes": ["Brilho", "Fosco"],
-      "descricao": "Adesivo vinil base branca sem corte."
-    }
-  ],
-  "banners": [
+     "id":"adesivo-redondo",
+     "nome":"Adesivo Redondo",
+     "preco":1.5,
+     "tipo":"fixo"
+    },
     {
-      "id": "banner-380g",
-      "nome": "Banner 380g",
-      "tipo": "m2",
-      "preco": 70,
-      "limiteAltura": 1.45,
-      "variacoes": ["Brilho", "Fosco"],
-      "descricao": "Banner com limite máximo de 1,45m no tubete."
+     "id":"adesivo-m2",
+     "nome":"Adesivo por m²",
+     "preco":80,
+     "tipo":"metro"
     }
-  ],
-  "papelaria": [
+   ]
+  },
+  {
+   "id":"banners",
+   "nome":"Banners",
+   "produtos":[
     {
-      "id": "caixa-milk",
-      "nome": "Caixa Milk",
-      "tipo": "fixo",
-      "preco": 2.5,
-      "variacoes": ["Simples", "3D", "Luxo"],
-      "descricao": "Caixa personalizada para festas."
+     "id":"banner-lona",
+     "nome":"Banner Lona",
+     "preco":60,
+     "tipo":"metro"
     }
-  ]
+   ]
+  }
+ ]
 }
