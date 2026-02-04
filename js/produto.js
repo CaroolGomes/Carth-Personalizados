@@ -1,32 +1,57 @@
-let produtoAtual;
-const params = new URLSearchParams(window.location.search);
+async function carregar() {
 
-fetch("data/produtos.json")
-.then(r=>r.json())
-.then(data=>{
-  produtoAtual = data[params.get("cat")]
-    .find(p=>p.id===params.get("id"));
+const params = new URLSearchParams(window.location.search)
+const categoriaID = params.get("categoria")
+const produtoID = params.get("produto")
 
-  document.getElementById("nome").innerText = produtoAtual.nome;
-  document.getElementById("desc").innerText = produtoAtual.descricao;
+const resp = await fetch("data/produtos.json")
+const data = await resp.json()
 
-  if(produtoAtual.tipo==="m2"){
-    document.getElementById("opcoes").innerHTML = `
-      <input type="number" id="h" placeholder="Altura (m)">
-      <input type="number" id="w" placeholder="Largura (m)">
-    `;
-  }
-});
+const categoria = data.categorias.find(c=>c.id==categoriaID)
+const produto = categoria.produtos.find(p=>p.id==produtoID)
 
-function add(){
-  let total = produtoAtual.preco;
-  let qtd = document.getElementById("qtd").value;
+let html = `
+<h2>${produto.nome}</h2>
+`
 
-  if(produtoAtual.tipo==="m2"){
-    const h = document.getElementById("h").value;
-    const w = document.getElementById("w").value;
-    total = h * w * produtoAtual.preco;
-  }
+if(produto.tipo == "metro"){
 
-  addCarrinho(produtoAtual.nome, total, qtd);
+html += `
+Altura: <input id="altura"><br>
+Largura: <input id="largura"><br>
+`
 }
+
+html += `
+Quantidade: <input id="qtd" value="1"><br>
+<button onclick="adicionar('${produto.nome}', ${produto.preco}, '${produto.tipo}')">
+Adicionar ao carrinho
+</button>
+`
+
+document.getElementById("produto").innerHTML = html
+}
+
+function adicionar(nome, preco, tipo){
+
+let qtd = Number(document.getElementById("qtd").value)
+let total = 0
+
+if(tipo == "metro"){
+let a = Number(document.getElementById("altura").value)
+let l = Number(document.getElementById("largura").value)
+total = a*l*preco*qtd
+}else{
+total = preco*qtd
+}
+
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
+
+carrinho.push({nome,total})
+
+localStorage.setItem("carrinho", JSON.stringify(carrinho))
+
+alert("Adicionado ao carrinho!")
+}
+
+carregar()
