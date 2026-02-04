@@ -1,82 +1,55 @@
 body{
+font-family: Arial;
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#ffffff;
+background:#dde5eb;
 }
 
-/* ===== TOPO ===== */
-
-.topo img{
-width:100%;
-display:block;
-}
-
-/* ===== MENU ===== */
-
-.menu{
+header{
 background:#16b4bc;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 30px;
-position:sticky;
-top:0;
-z-index:999;
+padding:15px;
 }
 
-.menu-principal{
-list-style:none;
+nav ul{
 display:flex;
 gap:30px;
-margin:0;
-padding:0;
+list-style:none;
 }
 
-.menu-principal li{
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.menu-drop{
 position:relative;
 }
 
-.menu-principal a{
-text-decoration:none;
-color:white;
-font-weight:bold;
-letter-spacing:1px;
-}
-
-/* ===== SUBMENU ===== */
-
-.submenu{
+.dropdown{
 display:none;
 position:absolute;
 background:#dd5490;
-top:40px;
-left:0;
-list-style:none;
 padding:15px;
-width:220px;
+top:30px;
 }
 
-.submenu li{
-padding:5px 0;
+.menu-drop:hover .dropdown{
+display:block;
 }
 
-.submenu a{
-color:white;
-font-size:14px;
+.card{
+background:white;
+padding:20px;
+margin:20px;
+border-radius:8px;
+box-shadow:0 0 5px #ccc;
 }
 
-/* ===== BUSCA ===== */
-
-.busca input{
-padding:8px 15px;
-border-radius:20px;
+button{
+background:#dd5490;
 border:none;
-outline:none;
+padding:10px 20px;
+color:white;
+cursor:pointer;
+border-radius:5px;
 }
-
-/* ===== INSTAGRAM ===== */
-
-.instagram{
-padding:40px;
-}
-
