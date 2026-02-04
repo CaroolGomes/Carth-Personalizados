@@ -2,22 +2,78 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carth Personalizados</title>
-<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>Carth Personalizados</h1>
-<a href="carrinho.html">🛒 Carrinho</a>
+    <h1>Carth Personalizados</h1>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Adesivos</a>
+        <a href="#">Banners</a>
+        <a href="#">Lembrancinhas</a>
+        <a href="#">Convites</a>
+        <a href="#">Contato</a>
+    </nav>
 </header>
 
-<h2>Categorias</h2>
+<!-- CARROSSEL -->
+<section class="carrossel">
+    <img src="img/banner1.jpg" class="slide active">
+    <img src="img/banner2.jpg" class="slide">
+    <img src="img/banner3.jpg" class="slide">
+</section>
 
-<div id="categorias"></div>
+<!-- INSTAGRAM -->
+<section class="instagram-feed">
+    <h2>Conheça nossos trabalhos</h2>
 
-<script src="js/app.js"></script>
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-072da568-a88d-474b-99bd-dbad60105a65"></div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="categorias">
+
+<h2>Nossos Produtos</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Adesivos</h3>
+<button onclick="alert('Página em construção')">Ver produtos</button>
+</div>
+
+<div class="card">
+<h3>Banners</h3>
+<button onclick="alert('Página em construção')">Ver produtos</button>
+</div>
+
+<div class="card">
+<h3>Lembrancinhas</h3>
+<button onclick="alert('Página em construção')">Ver produtos</button>
+</div>
+
+<div class="card">
+<h3>Convites</h3>
+<button onclick="alert('Página em construção')">Ver produtos</button>
+</div>
+
+</div>
+</section>
+
+<!-- WHATSAPP FIXO -->
+<a href="https://wa.me/5599999999999" class="whatsapp" target="_blank">
+💬
+</a>
+
+<script src="script.js"></script>
+
 </body>
 </html>
-
