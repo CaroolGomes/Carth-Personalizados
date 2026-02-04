@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Carth Personalizados</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Carth Personalizados</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
-  <h1>Carth Personalizados</h1>
-  <a href="carrinho.html">🛒 Carrinho</a>
+<h1>Carth Personalizados</h1>
+<a href="carrinho.html">🛒 Carrinho</a>
 </header>
 
-<section class="carousel">
-  <img src="img/1.jpg">
-  <img src="img/2.jpg">
-</section>
+<h2>Categorias</h2>
 
-<section class="categorias">
-  <a href="categoria.html?cat=adesivos">Adesivos</a>
-  <a href="categoria.html?cat=banners">Banners</a>
-  <a href="categoria.html?cat=papelaria">Papelaria</a>
-</section>
+<div id="categorias"></div>
 
-<script>
-let i=0;
-const imgs=document.querySelectorAll(".carousel img");
-setInterval(()=>{
-  imgs.forEach(img=>img.style.display="none");
-  imgs[i].style.display="block";
-  i=(i+1)%imgs.length;
-},3000);
-</script>
-
+<script src="js/app.js"></script>
 </body>
 </html>
+
