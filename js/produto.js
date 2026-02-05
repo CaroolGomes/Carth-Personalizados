@@ -1,57 +1,20 @@
-async function carregar() {
+aimport { adicionarCarrinho } from "./carrinho.js";
 
-const params = new URLSearchParams(window.location.search)
-const categoriaID = params.get("categoria")
-const produtoID = params.get("produto")
+export function iniciarProdutos(){
 
-const resp = await fetch("data/produtos.json")
-const data = await resp.json()
+    const botoes = document.querySelectorAll("[data-produto]");
 
-const categoria = data.categorias.find(c=>c.id==categoriaID)
-const produto = categoria.produtos.find(p=>p.id==produtoID)
+    botoes.forEach(botao => {
 
-let html = `
-<h2>${produto.nome}</h2>
-`
+        botao.addEventListener("click", () => {
 
-if(produto.tipo == "metro"){
+            const produto = botao.dataset.produto;
+            const quantidade = botao.dataset.quantidade || 1;
 
-html += `
-Altura: <input id="altura"><br>
-Largura: <input id="largura"><br>
-`
+            adicionarCarrinho(produto, quantidade);
+
+        });
+
+    });
+
 }
-
-html += `
-Quantidade: <input id="qtd" value="1"><br>
-<button onclick="adicionar('${produto.nome}', ${produto.preco}, '${produto.tipo}')">
-Adicionar ao carrinho
-</button>
-`
-
-document.getElementById("produto").innerHTML = html
-}
-
-function adicionar(nome, preco, tipo){
-
-let qtd = Number(document.getElementById("qtd").value)
-let total = 0
-
-if(tipo == "metro"){
-let a = Number(document.getElementById("altura").value)
-let l = Number(document.getElementById("largura").value)
-total = a*l*preco*qtd
-}else{
-total = preco*qtd
-}
-
-let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
-
-carrinho.push({nome,total})
-
-localStorage.setItem("carrinho", JSON.stringify(carrinho))
-
-alert("Adicionado ao carrinho!")
-}
-
-carregar()
