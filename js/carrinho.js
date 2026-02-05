@@ -1,25 +1,25 @@
-let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-let html = ""
-let total = 0
+export function adicionarCarrinho(produto, quantidade){
 
-carrinho.forEach(item=>{
-html += `<p>${item.nome} - R$ ${item.total.toFixed(2)}</p>`
-total += item.total
-})
+    const item = {
+        produto,
+        quantidade
+    };
 
-document.getElementById("listaCarrinho").innerHTML = html
-document.getElementById("total").innerText = "Total: R$ " + total.toFixed(2)
+    carrinho.push(item);
 
-function finalizar(){
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
-let mensagem = "Pedido:%0A"
-
-carrinho.forEach(item=>{
-mensagem += `${item.nome} - R$ ${item.total.toFixed(2)}%0A`
-})
-
-mensagem += `Total: R$ ${total.toFixed(2)}`
-
-window.open(`https://wa.me/5599999999999?text=${mensagem}`)
+    alert("Item adicionado ao carrinho!");
 }
+
+export function obterCarrinho(){
+    return carrinho;
+}
+
+export function limparCarrinho(){
+    carrinho = [];
+    localStorage.removeItem("carrinho");
+}
+
