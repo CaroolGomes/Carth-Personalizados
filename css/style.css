@@ -1,55 +1,86 @@
-body{
-font-family: Arial;
-margin:0;
-background:#dde5eb;
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header{
-background:#16b4bc;
-padding:15px;
+/* CORES DA MARCA */
+:root{
+    --azul:#16b4bc;
+    --rosa:#dd5490;
+    --cinza:#dde5eb;
 }
 
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
+/* TOPO */
+.topo img{
+    width:100%;
+    height:600px;
+    object-fit:cover;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
+/* MENU PRINCIPAL */
+.menu{
+    background:var(--azul);
 }
 
-.menu-drop{
-position:relative;
+.menu ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
 }
 
-.dropdown{
-display:none;
-position:absolute;
-background:#dd5490;
-padding:15px;
-top:30px;
+.menu ul li{
+    position:relative;
 }
 
-.menu-drop:hover .dropdown{
-display:block;
+.menu ul li a{
+    display:block;
+    padding:18px 30px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-.card{
-background:white;
-padding:20px;
-margin:20px;
-border-radius:8px;
-box-shadow:0 0 5px #ccc;
+/* HOVER BOTÃO PRINCIPAL */
+.menu ul li:hover > a{
+    background:var(--rosa);
 }
 
-button{
-background:#dd5490;
-border:none;
-padding:10px 20px;
-color:white;
-cursor:pointer;
-border-radius:5px;
+/* DROPDOWN */
+.dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    background:var(--rosa);
+    display:none;
+    min-width:220px;
+    flex-direction:column;
+    z-index:999;
 }
+
+/* MOSTRAR DROPDOWN */
+.dropdown:hover .dropdown-menu{
+    display:flex;
+}
+
+/* ITENS DO DROPDOWN */
+.dropdown-menu li a{
+    padding:12px 20px;
+    color:white;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+/* HOVER DOS ITENS DO DROPDOWN */
+.dropdown-menu li a:hover{
+    background:white;
+    color:var(--rosa);
+}
+
+/* INSTAGRAM */
+.instagram{
+    padding:40px;
+    background:var(--cinza);
+}
+
