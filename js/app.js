@@ -1,51 +1,24 @@
-async function carregarDados() {
-const resp = await fetch("data/produtos.json")
-return resp.json()
+import { obterCarrinho } from "./carrinho.js";
+
+export function enviarWhatsApp(){
+
+    const carrinho = obterCarrinho();
+
+    if(carrinho.length === 0){
+        alert("Seu carrinho está vazio!");
+        return;
+    }
+
+    let mensagem = "Olá! Gostaria de fazer um pedido:%0A%0A";
+
+    carrinho.forEach(item => {
+        mensagem += `Produto: ${item.produto}%0AQuantidade: ${item.quantidade}%0A%0A`;
+    });
+
+    const numero = "5521992602985";
+
+    const link = `https://wa.me/${numero}?text=${mensagem}`;
+
+    window.open(link, "_blank");
 }
 
-const urlParams = new URLSearchParams(window.location.search)
-const categoriaID = urlParams.get("categoria")
-
-carregarDados().then(data => {
-
-if(document.getElementById("categorias")){
-
-let html = ""
-
-data.categorias.forEach(cat=>{
-html += `
-<div class="card">
-<h3>${cat.nome}</h3>
-<a href="categoria.html?categoria=${cat.id}">
-<button>Ver</button>
-</a>
-</div>
-`
-})
-
-document.getElementById("categorias").innerHTML = html
-}
-
-if(categoriaID){
-
-const categoria = data.categorias.find(c=>c.id==categoriaID)
-
-document.getElementById("tituloCategoria").innerText = categoria.nome
-
-let html = ""
-
-categoria.produtos.forEach(prod=>{
-html += `
-<div class="card">
-<h3>${prod.nome}</h3>
-<a href="produto.html?categoria=${categoria.id}&produto=${prod.id}">
-<button>Ver Produto</button>
-</a>
-</div>
-`
-})
-
-document.getElementById("produtos").innerHTML = html
-}
-
-})
