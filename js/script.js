@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ============================
-       DROPDOWN MENU
-    ============================ */
-
+    /* DROPDOWN */
     const dropdowns = document.querySelectorAll(".dropdown");
 
     dropdowns.forEach(dropdown => {
@@ -17,20 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
-
-
-    /* ============================
-       MENU MOBILE (FUTURO)
-    ============================ */
-
-    const btnMenu = document.querySelector(".btn-menu");
-    const menu = document.querySelector(".menu ul");
-
-    if (btnMenu && menu) {
-        btnMenu.addEventListener("click", () => {
-            menu.classList.toggle("menu-mobile");
-        });
-    }
 
 });
 
@@ -79,4 +62,3 @@ function enviarWhatsApp(){
 
     window.open(link, "_blank");
 }
-
