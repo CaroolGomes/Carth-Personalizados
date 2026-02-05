@@ -1,12 +1,17 @@
-function toggleMenu(){
+export function iniciarMenu(){
 
-let menu = document.getElementById("submenu");
+    const dropdowns = document.querySelectorAll(".dropdown");
 
-if(menu.style.display === "block"){
-    menu.style.display = "none";
-}
-else{
-    menu.style.display = "block";
-}
+    dropdowns.forEach(dropdown => {
+
+        dropdown.addEventListener("mouseenter", () => {
+            dropdown.classList.add("ativo");
+        });
+
+        dropdown.addEventListener("mouseleave", () => {
+            dropdown.classList.remove("ativo");
+        });
+
+    });
 
 }
