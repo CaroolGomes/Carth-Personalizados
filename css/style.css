@@ -43,7 +43,7 @@
     transition:0.3s;
 }
 
-/* HOVER BOTÃO PRINCIPAL */
+/* Hover botão principal */
 .menu ul li:hover > a{
     background:var(--rosa);
 }
@@ -60,19 +60,19 @@
     z-index:999;
 }
 
-/* MOSTRAR DROPDOWN */
-.dropdown:hover .dropdown-menu{
+/* MOSTRAR DROPDOWN (AGORA PELO JS) */
+.dropdown.ativo .dropdown-menu{
     display:flex;
 }
 
-/* ITENS DO DROPDOWN */
+/* ITENS DROPDOWN */
 .dropdown-menu li a{
     padding:12px 20px;
     color:white;
     border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
-/* HOVER DOS ITENS DO DROPDOWN */
+/* Hover itens dropdown */
 .dropdown-menu li a:hover{
     background:white;
     color:var(--rosa);
@@ -83,4 +83,3 @@
     padding:40px;
     background:var(--cinza);
 }
-
