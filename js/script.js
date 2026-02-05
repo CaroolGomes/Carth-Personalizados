@@ -1,12 +1,13 @@
-/* ============================
-   DROPDOWN MENU (SEGURANÇA EXTRA)
-============================ */
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    const dropdown = document.querySelector(".dropdown");
+    /* ============================
+       DROPDOWN MENU
+    ============================ */
 
-    if (dropdown) {
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    dropdowns.forEach(dropdown => {
+
         dropdown.addEventListener("mouseenter", () => {
             dropdown.classList.add("ativo");
         });
@@ -14,27 +15,28 @@ document.addEventListener("DOMContentLoaded", () => {
         dropdown.addEventListener("mouseleave", () => {
             dropdown.classList.remove("ativo");
         });
+
+    });
+
+
+    /* ============================
+       MENU MOBILE (FUTURO)
+    ============================ */
+
+    const btnMenu = document.querySelector(".btn-menu");
+    const menu = document.querySelector(".menu ul");
+
+    if (btnMenu && menu) {
+        btnMenu.addEventListener("click", () => {
+            menu.classList.toggle("menu-mobile");
+        });
     }
 
 });
 
 
 /* ============================
-   MENU MOBILE (PREPARADO)
-============================ */
-
-const btnMenu = document.querySelector(".btn-menu");
-const menu = document.querySelector(".menu ul");
-
-if(btnMenu){
-    btnMenu.addEventListener("click", () => {
-        menu.classList.toggle("menu-mobile");
-    });
-}
-
-
-/* ============================
-   CARRINHO BASE (LOCAL STORAGE)
+   CARRINHO BASE
 ============================ */
 
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -55,7 +57,7 @@ function adicionarCarrinho(produto, quantidade){
 
 
 /* ============================
-   ENVIAR PEDIDO PARA WHATSAPP
+   ENVIAR WHATSAPP
 ============================ */
 
 function enviarWhatsApp(){
@@ -71,9 +73,10 @@ function enviarWhatsApp(){
         mensagem += `Produto: ${item.produto}%0AQuantidade: ${item.quantidade}%0A%0A`;
     });
 
-    let numero = "5521992602985"; // COLOQUE SEU WHATSAPP AQUI
+    let numero = "5521992602985";
 
     let link = `https://wa.me/${numero}?text=${mensagem}`;
 
     window.open(link, "_blank");
 }
+
