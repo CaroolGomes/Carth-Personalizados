@@ -1,23 +1,48 @@
-/* MENU PRINCIPAL */
-.menu{
-    background:var(--azul);
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+/* CORES */
+:root{
+    --azul:#16b4bc;
+    --rosa:#dd5490;
+    --cinza:#dde5eb;
+}
+
+/* TOPO */
+.topo img{
+    width:100%;
+    height:600px;
+    object-fit:cover;
+}
+
+/* MENU */
+.menu{
+    background:var(--azul);
+    position:sticky;
+    top:0;
+    z-index:9999;
+}
+
+/* LISTA MENU */
 .menu ul{
     list-style:none;
     display:flex;
     justify-content:center;
     align-items:center;
-    flex-wrap:nowrap; /* impede quebrar linha */
+    flex-wrap:nowrap;
 }
 
-/* Cada botão */
+/* BOTÕES */
 .menu ul li{
     position:relative;
-    white-space:nowrap; /* impede quebrar texto */
+    white-space:nowrap;
 }
 
-/* Links */
+/* LINKS */
 .menu ul li a{
     display:block;
     padding:18px 28px;
@@ -27,12 +52,12 @@
     transition:0.3s;
 }
 
-/* Hover botão principal */
+/* HOVER BOTÃO PRINCIPAL */
 .menu ul li:hover > a{
     background:var(--rosa);
 }
 
-/* DROPDOWN ESCONDIDO */
+/* DROPDOWN */
 .dropdown-menu{
     position:absolute;
     top:100%;
@@ -44,7 +69,7 @@
     z-index:9999;
 }
 
-/* MOSTRAR DROPDOWN SOMENTE QUANDO ATIVO */
+/* MOSTRAR DROPDOWN */
 .dropdown.ativo > .dropdown-menu{
     display:flex;
 }
@@ -60,8 +85,14 @@
     border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
-/* Hover itens dropdown */
+/* HOVER ITENS DROPDOWN */
 .dropdown-menu li a:hover{
     background:white;
     color:var(--rosa);
+}
+
+/* INSTAGRAM */
+.instagram{
+    padding:40px;
+    background:var(--cinza);
 }
