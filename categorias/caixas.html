@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Caixas Cartonadas | Carth Personalizados</title>
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="topo">
+<img src="../img/logo.png">
+</header>
+
+<nav class="menu">
+<ul>
+
+<li><a href="../index.html">INÍCIO</a></li>
+
+<li class="dropdown">
+<a href="#">CATÁLOGO</a>
+
+<ul class="dropdown-menu">
+<li><a href="adesivos.html">Adesivos</a></li>
+<li><a href="banners.html">Banners</a></li>
+<li><a href="caixas.html">Caixas Cartonadas</a></li>
+</ul>
+</li>
+
+<li><a href="../carrinho.html">CARRINHO</a></li>
+
+</ul>
+</nav>
+
+<section class="container">
+
+<h1>Caixas Cartonadas</h1>
+
+<div class="produto">
+
+<h3>Escolha o tamanho da caixa</h3>
+
+<select id="caixaTipo">
+<option value="20">P - 10x10x10 | A partir de R$ 20,00</option>
+<option value="25">M - 15x15x10 | A partir de R$ 25,00</option>
+<option value="35">G - 20x20x10 | A partir de R$ 35,00</option>
+<option value="45">GG - 28x20x10 | A partir de R$ 45,00</option>
+</select>
+
+<label>Quantidade</label>
+<input type="number" id="caixaQtd" min="1" value="1">
+
+<p id="caixaValor">Valor unitário: R$ 20,00</p>
+
+<button onclick="comprarCaixa()">Adicionar ao carrinho</button>
+
+</div>
+
+</section>
+
+<script src="../js/caixa.js"></script>
+<script src="../js/carrinho.js"></script>
+<script src="../js/menu.js"></script>
+
+</body>
+</html>
 
