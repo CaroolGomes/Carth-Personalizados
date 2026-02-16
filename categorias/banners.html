@@ -4,68 +4,140 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Banners - Carth Personalizados</title>
+<title>Banners | Carth Personalizados</title>
 
 <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
 
 <header class="topo">
-<img src="../img/head.jpg">
+<img src="../img/logo.png">
 </header>
 
 <nav class="menu">
-<ul class="menu-principal">
+<ul>
+
 <li><a href="../index.html">INÍCIO</a></li>
+
+<li class="dropdown">
+<a href="#">CATÁLOGO</a>
+
+<ul class="dropdown-menu">
+<li><a href="adesivos.html">Adesivos</a></li>
+<li><a href="banners.html">Banners</a></li>
+</ul>
+</li>
+
+<li><a href="../carrinho.html">CARRINHO</a></li>
+
 </ul>
 </nav>
 
-<section class="categoria">
+<section class="container">
 
-<h1>BANNERS PERSONALIZADOS</h1>
+<h1>BANNERS</h1>
+<p>Tamanho máximo do tubete: <strong>1,45m de largura</strong></p>
 
-<div class="produtos">
+<!-- SOLVENTE 380 -->
+<div class="produto">
 
-<!-- PRODUTO 1 -->
+<h3>Banner 380g Solvente</h3>
+<p>R$ 70,00 / m²</p>
 
-<div class="card">
+<input type="number" id="s380Alt" placeholder="Altura (m)" step="0.01">
+<input type="number" id="s380Lar" placeholder="Largura (m)" step="0.01" max="1.45">
+<input type="number" id="s380Qtd" min="1" value="1">
 
-<img src="../img/produtos/banner1.jpg">
+<p id="s380Total">Valor: R$ 0.00</p>
 
-<h3>Banner Festa Infantil</h3>
-
-<p>Banner lona 1x0,70 personalizado</p>
-
-<button onclick="enviarWhats('Banner Festa Infantil')">
-Pedir Orçamento
+<button onclick="comprarBanner('s380',70,'Banner 380g Solvente')">
+Adicionar ao carrinho
 </button>
 
 </div>
 
 
-<!-- PRODUTO 2 -->
+<!-- SOLVENTE 440 -->
+<div class="produto">
 
-<div class="card">
+<h3>Banner 440g Solvente</h3>
+<p>R$ 90,00 / m²</p>
 
-<img src="../img/produtos/banner2.jpg">
+<input type="number" id="s440Alt" placeholder="Altura (m)" step="0.01">
+<input type="number" id="s440Lar" placeholder="Largura (m)" step="0.01" max="1.45">
+<input type="number" id="s440Qtd" min="1" value="1">
 
-<h3>Banner Fotográfico</h3>
+<p id="s440Total">Valor: R$ 0.00</p>
 
-<p>Alta qualidade e acabamento premium</p>
-
-<button onclick="enviarWhats('Banner Fotográfico')">
-Pedir Orçamento
+<button onclick="comprarBanner('s440',90,'Banner 440g Solvente')">
+Adicionar ao carrinho
 </button>
 
 </div>
+
+
+<!-- UV 380 -->
+<div class="produto">
+
+<h3>Banner 380g UV</h3>
+<p>R$ 80,00 / m²</p>
+
+<input type="number" id="uv380Alt" placeholder="Altura (m)" step="0.01">
+<input type="number" id="uv380Lar" placeholder="Largura (m)" step="0.01" max="1.45">
+<input type="number" id="uv380Qtd" min="1" value="1">
+
+<p id="uv380Total">Valor: R$ 0.00</p>
+
+<button onclick="comprarBanner('uv380',80,'Banner 380g UV')">
+Adicionar ao carrinho
+</button>
+
+</div>
+
+
+<!-- UV 440 -->
+<div class="produto">
+
+<h3>Banner 440g UV</h3>
+<p>R$ 110,00 / m²</p>
+
+<input type="number" id="uv440Alt" placeholder="Altura (m)" step="0.01">
+<input type="number" id="uv440Lar" placeholder="Largura (m)" step="0.01" max="1.45">
+<input type="number" id="uv440Qtd" min="1" value="1">
+
+<p id="uv440Total">Valor: R$ 0.00</p>
+
+<button onclick="comprarBanner('uv440',110,'Banner 440g UV')">
+Adicionar ao carrinho
+</button>
+
+</div>
+
+
+<!-- ARTE -->
+<div class="produto">
+
+<h3>Arte para Banner</h3>
+<p>R$ 50,00 / m²</p>
+
+<input type="number" id="arteAlt" placeholder="Altura (m)" step="0.01">
+<input type="number" id="arteLar" placeholder="Largura (m)" step="0.01">
+<input type="number" id="arteQtd" min="1" value="1">
+
+<p id="arteTotal">Valor: R$ 0.00</p>
+
+<button onclick="comprarBanner('arte',50,'Arte para Banner')">
+Adicionar ao carrinho
+</button>
 
 </div>
 
 </section>
 
-<script src="../js/whatsapp.js"></script>
+<script src="../js/banner.js"></script>
+<script src="../js/carrinho.js"></script>
+<script src="../js/menu.js"></script>
 
 </body>
 </html>
