@@ -1,20 +1,29 @@
-aimport { adicionarCarrinho } from "./carrinho.js";
+/* ===== A4 ===== */
 
-export function iniciarProdutos(){
+function comprarA4(){
 
-    const botoes = document.querySelectorAll("[data-produto]");
+    let tipo = document.getElementById("a4Tipo");
+    let qtd = document.getElementById("a4Qtd").value;
 
-    botoes.forEach(botao => {
+    let nome = "Adesivo A4 - " + tipo.options[tipo.selectedIndex].text;
+    let preco = parseFloat(tipo.value);
 
-        botao.addEventListener("click", () => {
-
-            const produto = botao.dataset.produto;
-            const quantidade = botao.dataset.quantidade || 1;
-
-            adicionarCarrinho(produto, quantidade);
-
-        });
-
-    });
+    adicionarCarrinho(nome, preco, qtd);
 
 }
+
+
+/* ===== VINIL BASE BRANCA ===== */
+
+function comprarVB(){
+
+    let altura = parseFloat(document.getElementById("vbAltura").value);
+    let largura = parseFloat(document.getElementById("vbLargura").value);
+    let qtd = parseInt(document.getElementById("vbQtd").value);
+
+    let preco = calcularM2(altura, largura, 65);
+
+    adicionarCarrinho("Vinil Base Branca", preco, qtd);
+
+}
+
