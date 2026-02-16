@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adesivos | Carth Personalizados</title>
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="topo">
+    <img src="../img/logo.png">
+</header>
+
+<nav class="menu">
+<ul>
+
+<li><a href="../index.html">INÍCIO</a></li>
+
+<li class="dropdown">
+<a href="#">CATÁLOGO</a>
+
+<ul class="dropdown-menu">
+<li><a href="adesivos.html">Adesivos</a></li>
+<li><a href="banners.html">Banners</a></li>
+<li><a href="caixas.html">Caixas</a></li>
+</ul>
+</li>
+
+<li><a href="../carrinho.html">CARRINHO</a></li>
+
+</ul>
+</nav>
+
+<section class="container">
+
+<h1>ADESIVOS</h1>
+
+<!-- ADESIVO A4 -->
+<div class="produto">
+
+<h3>Adesivo Fotográfico A4</h3>
+
+<select id="a4Tipo">
+<option value="3.99">Sem corte - R$3,99</option>
+<option value="5.99">Com corte - R$5,99</option>
+</select>
+
+<input type="number" id="a4Qtd" min="1" value="1">
+
+<button onclick="comprarA4()">Adicionar ao carrinho</button>
+
+</div>
+
+<hr>
+
+<!-- VINIL BASE BRANCA -->
+<div class="produto">
+
+<h3>Vinil Base Branca</h3>
+<p>R$ 65,00 / m²</p>
+
+<label>Altura (m)</label>
+<input type="number" id="vbAltura" step="0.01">
+
+<label>Largura (m)</label>
+<input type="number" id="vbLargura" step="0.01">
+
+<label>Quantidade</label>
+<input type="number" id="vbQtd" min="1" value="1">
+
+<p id="vbResultado">Valor: R$ 0.00</p>
+
+<button onclick="comprarVB()">Adicionar ao carrinho</button>
+
+</div>
+
+</section>
+
+<script src="../js/produto.js"></script>
+<script src="../js/calculos.js"></script>
+<script src="../js/carrinho.js"></script>
+<script src="../js/menu.js"></script>
+
+</body>
+</html>
 
