@@ -96,3 +96,32 @@
     padding:40px;
     background:var(--cinza);
 }
+.container{
+    padding:40px;
+    max-width:900px;
+    margin:auto;
+}
+
+.produto{
+    background:#f5f5f5;
+    padding:20px;
+    margin-bottom:30px;
+    border-radius:10px;
+}
+
+.produto input,
+.produto select{
+    display:block;
+    margin:10px 0;
+    padding:8px;
+    width:200px;
+}
+
+.produto button{
+    background:#dd5490;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:6px;
+}
