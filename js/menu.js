@@ -1,17 +1,11 @@
-export function iniciarMenu(){
+document.querySelectorAll(".dropdown").forEach(drop => {
 
-    const dropdowns = document.querySelectorAll(".dropdown");
-
-    dropdowns.forEach(dropdown => {
-
-        dropdown.addEventListener("mouseenter", () => {
-            dropdown.classList.add("ativo");
-        });
-
-        dropdown.addEventListener("mouseleave", () => {
-            dropdown.classList.remove("ativo");
-        });
-
+    drop.addEventListener("mouseenter", () => {
+        drop.classList.add("ativo");
     });
 
-}
+    drop.addEventListener("mouseleave", () => {
+        drop.classList.remove("ativo");
+    });
+
+});
