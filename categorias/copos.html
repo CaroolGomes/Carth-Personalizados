@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Copos e Canecas | Carth Personalizados</title>
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="topo">
+<img src="../img/logo.png">
+</header>
+
+<nav class="menu">
+<ul>
+
+<li><a href="../index.html">INÍCIO</a></li>
+
+<li class="dropdown">
+<a href="#">CATÁLOGO</a>
+
+<ul class="dropdown-menu">
+<li><a href="copos.html">Copos e Canecas</a></li>
+</ul>
+</li>
+
+<li><a href="../carrinho.html">CARRINHO</a></li>
+
+</ul>
+</nav>
+
+<section class="container">
+
+<h1>Copos e Canecas</h1>
+
+<div class="produto">
+
+<h3>Escolha o produto</h3>
+
+<select id="produto">
+<option value="17.99">Caneca de Porcelana sem personalização</option>
+<option value="34.99">Caneca de Porcelana personalizada (arte do cliente)</option>
+<option value="9.99">Arte para Caneca</option>
+<option value="49.90">Copo térmico 300ml gravação a laser</option>
+<option value="59.90">Garrafa térmica 500ml gravação a laser</option>
+</select>
+
+<h3>Escolha a cor (quando aplicável)</h3>
+
+<select id="cor">
+<option value="Sem cor">Sem cor</option>
+<option value="Preto">Preto</option>
+<option value="Branco">Branco</option>
+<option value="Amarelo">Amarelo</option>
+<option value="Rosa">Rosa</option>
+<option value="Azul Marinho Fechado">Azul Marinho Fechado</option>
+<option value="Azul Marinho Aberto">Azul Marinho Aberto</option>
+<option value="Dourado">Dourado</option>
+<option value="Vermelho">Vermelho</option>
+<option value="Azul Celeste">Azul Celeste</option>
+<option value="Azul Claro">Azul Claro</option>
+</select>
+
+<label>Quantidade</label>
+<input type="number" id="quantidade" min="1" value="1">
+
+<p id="valorProduto">Valor unitário: R$ 17,99</p>
+
+<button onclick="comprar()">Adicionar ao carrinho</button>
+
+</div>
+
+</section>
+
+<script src="../js/copos.js"></script>
+<script src="../js/carrinho.js"></script>
+<script src="../js/menu.js"></script>
+
+</body>
+</html>
 
